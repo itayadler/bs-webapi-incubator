@@ -65,6 +65,7 @@ module Impl = (T: {type t;}) => {
 
   //IFrame element specific attributes
   [@bs.get] [@bs.return nullable] external contentDocument: T.t => option(Dom.document) = "contentDocument";
+  [@bs.get] [@bs.return nullable] external contentWindow: T.t => option(Dom.window) = "contentWindow";
 
   [@bs.send.pipe: t_htmlElement] external blur: unit = "";
   [@bs.send.pipe: t_htmlElement] external click: unit = "";
